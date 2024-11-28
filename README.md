@@ -51,12 +51,20 @@ Interfaz amigable: Los mensajes son claros, con explicaciones y emojis que hacen
 Gráficos visuales: Una de las mejoras más importantes fue la inclusión de gráficos que permiten visualizar las comparaciones de tasas de manera sencilla.
 Manejo de errores eficiente: Si ocurre un problema (como una moneda o fecha inválida), el bot informa al usuario sin interrumpir su experiencia.
 
-Perspectivas futuras
+Perspectivas futuras (SE AGREGO EL ANALISIS SEMANAL A PARTIR DE UNA FECHA DETERMINADA PUESTA POR EL USUARIO)
 Aunque el proyecto está completo, siempre hay espacio para mejorar. Algunas ideas para el futuro incluyen:
 Notificaciones automáticas: Informar a los usuarios sobre cambios significativos en las tasas de cambio.
 Soporte multilenguaje: Hacer que el bot sea accesible para personas que hablen otros idiomas.
 Gráficos más avanzados: Permitir comparaciones entre múltiples monedas en un solo gráfico.
 Datos predeterminados: Facilitar el uso ofreciendo sugerencias automáticas si el usuario no ingresa información.
+
+FUNCION AGREGADA:
+
+La nueva funcionalidad de **análisis semanal** permite al usuario observar la evolución de la tasa de cambio de una moneda con respecto a otra durante un periodo de siete días. A través del comando **"📈 Análisis semanal"**, el bot solicita al usuario tres datos: la moneda base (por ejemplo, USD), la moneda objetivo (por ejemplo, EUR) y la fecha inicial del análisis en formato YYYY-MM-DD.
+
+El bot utiliza estos datos para realizar consultas diarias a la API ForexRate durante los siete días siguientes a la fecha inicial. Se obtienen las tasas de cambio diarias y se calculan valores clave, como la tasa inicial, la tasa final, los valores máximo y mínimo durante el periodo, y la variación porcentual de la moneda objetivo frente a la base. Además, el bot genera un gráfico que muestra las fluctuaciones diarias.
+
+El usuario recibe un mensaje en el chat que incluye los datos mencionados y un gráfico adjunto que representa visualmente las tasas durante la semana, ayudando a comprender cómo evolucionaron las tasas entre las monedas seleccionadas.
 
 Conclusión
 TuConversor es el resultado de semanas de trabajo, investigación y pruebas. Logramos crear un bot funcional que cumple con los objetivos propuestos y ofrece una experiencia positiva a los usuarios. Aunque enfrentamos desafíos, como el cambio de API, estos nos llevaron a un resultado final más completo y robusto.
